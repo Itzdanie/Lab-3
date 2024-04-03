@@ -32,17 +32,25 @@ module stimulus ();
    always 
      begin
 	desc3 = handle3;
-	#5 $fdisplay(desc3, "%b %b || %b", 
-		     reset, a, y);
+	#5 $fdisplay(desc3, "%b %b %b || %b", 
+		     reset, left, right, y);
      end   
    
    initial 
      begin      
-	#0   reset = 1'b1;
-	#41  reset = 1'b0;	
-	#0   a = 1'b0;
-	#20  a = 1'b1;
-	#20  a = 1'b0;
+	
+     #0 left = 1'b0;
+     #0 right = 1'b0;
+
+     #20 left = 1'b1;
+     #0 right = 1'b0;
+
+     #40 left = 1'b0;
+     #0 right = 1'b1;
+
+     #20 left = 1'b1;
+     #0 right = 1'b1;
+
      end
 
 endmodule // FSM_tb
