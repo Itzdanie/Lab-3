@@ -9,10 +9,10 @@ module FSM (clk, reset, left, right, y);
 
    typedef enum 	logic [3:0] {S0, S1, S2, S3, S4, S5, S6, S7, S8, S9} statetype;
    statetype state, nextstate;
-   
+
    // state register
    always_ff @(posedge clk)
-     if (reset) state <= S0;
+     if (reset) state <= S0; 
      else       state <= nextstate;
    
    // next state logic
@@ -21,7 +21,7 @@ module FSM (clk, reset, left, right, y);
         S0: begin
 	        y <= 6'b000000;
           if (left & right) nextstate <= S7;
-	      else if (left) nextstate <= S1;
+	        else if (left) nextstate <= S1;
           else if (right) nextstate <= S4;
         end
         S1: begin

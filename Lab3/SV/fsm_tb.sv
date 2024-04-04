@@ -6,7 +6,9 @@ module stimulus ();
    logic  right;
    logic  reset;
    
-   logic  y;
+   logic  [5:0] y;
+   logic  ostate;
+   logic  onstate;
    
    integer handle3;
    integer desc3;
@@ -29,8 +31,7 @@ module stimulus ();
 	#500 $finish;		
      end
 
-   always 
-     begin
+   always @(posedge clk) begin
 	desc3 = handle3;
 	#5 $fdisplay(desc3, "%b %b %b || %b", 
 		     reset, left, right, y);
@@ -42,14 +43,19 @@ module stimulus ();
      #0 left = 1'b0;
      #0 right = 1'b0;
 
-     #20 left = 1'b1;
+     #40 left = 1'b1;
      #0 right = 1'b0;
 
      #40 left = 1'b0;
      #0 right = 1'b1;
 
-     #20 left = 1'b1;
+     #40 left = 1'b1;
      #0 right = 1'b1;
+
+     #40 left = 1'b1;
+     #0 right = 1'b0;
+     #20 reset = 1'b1;
+
 
      end
 
