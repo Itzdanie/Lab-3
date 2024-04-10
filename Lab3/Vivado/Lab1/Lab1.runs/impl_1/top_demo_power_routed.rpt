@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1.1 (win64) Build 3900603 Fri Jun 16 19:31:24 MDT 2023
-| Date             : Wed Apr 10 16:53:44 2024
+| Date             : Wed Apr 10 17:20:46 2024
 | Host             : CEAT-ENDV350-02 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_demo_power_routed.rpt -pb top_demo_power_summary_routed.pb -rpx top_demo_power_routed.rpx
 | Design           : top_demo
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 21.848 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 22.177 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 20.807                           |
+| Dynamic (W)              | 21.136                           |
 | Device Static (W)        | 1.041                            |
 | Effective TJA (C/W)      | 11.5                             |
 | Max Ambient (C)          | 0.0                              |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.185 |       97 |       --- |             --- |
-|   LUT as Logic |     0.131 |       19 |     53200 |            0.04 |
-|   CARRY4       |     0.025 |       11 |     13300 |            0.08 |
-|   Register     |     0.023 |       53 |    106400 |            0.05 |
+| Slice Logic    |     0.186 |      101 |       --- |             --- |
+|   LUT as Logic |     0.132 |       19 |     53200 |            0.04 |
+|   CARRY4       |     0.025 |       12 |     13300 |            0.09 |
+|   Register     |     0.023 |       56 |    106400 |            0.05 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |     0.367 |       88 |       --- |             --- |
-| I/O            |    20.255 |       27 |       200 |           13.50 |
+| Signals        |     0.366 |       92 |       --- |             --- |
+| I/O            |    20.584 |       27 |       200 |           13.50 |
 | Static Power   |     1.041 |          |           |                 |
-| Total          |    21.848 |          |           |                 |
+| Total          |    22.177 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,8 +72,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.875 |       0.576 |      0.299 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.841 |       0.741 |      0.100 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     5.727 |       5.726 |      0.001 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.853 |       0.753 |      0.100 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     5.820 |       5.819 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,10 +145,10 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| top_demo     |    20.807 |
-|   driver     |     0.246 |
-|   dut        |     0.067 |
-|   real_clock |     0.089 |
+| top_demo     |    21.136 |
+|   driver     |     0.242 |
+|   dut        |     0.073 |
+|   real_clock |     0.091 |
 +--------------+-----------+
 
 
