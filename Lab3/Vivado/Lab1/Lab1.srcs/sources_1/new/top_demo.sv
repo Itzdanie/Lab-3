@@ -47,16 +47,16 @@ module top_demo
   
   // Place TicTacToe instantiation here
   clk_div real_clock(sysclk_125mhz, btn[3], sec_clk);
-  FSM dut(sec_clk, btn[3], sw[7], sw[0], led[6:1]);
+  FSM dut(sec_clk, btn[3], sw[4], sw[3], led[6:1]);
 
   // 7-segment display
   segment_driver driver(
   .clk(smol_clk),
   .rst(btn[3]),
-  .digit0(4'b0101),
-  .digit1(4'b0101),
-  .digit2(4'b0101),
-  .digit3(4'b0101),
+  .digit0(4'b0000),
+  .digit1(4'b0000),
+  .digit2(4'b0000),
+  .digit3(4'b0000),
   .decimals({1'b0, btn[2:0]}),
   .segment_cathodes({sseg_dp, sseg_cg, sseg_cf, sseg_ce, sseg_cd, sseg_cc, sseg_cb, sseg_ca}),
   .digit_anodes(sseg_an)
