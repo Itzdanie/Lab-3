@@ -20,9 +20,10 @@ module FSM (clk, reset, left, right, y);
      case (state)
         S0: begin
 	        y <= 6'b000000;
-          if (left & right) nextstate <= S7;
+          if (left && right) nextstate <= S7;
 	        else if (left) nextstate <= S1;
           else if (right) nextstate <= S4;
+          else nextstate <= S0;
         end
         S1: begin
 	        y <= 6'b001000;	 

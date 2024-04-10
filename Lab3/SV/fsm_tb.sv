@@ -7,8 +7,6 @@ module stimulus ();
    logic  reset;
    
    logic  [5:0] y;
-   logic  ostate;
-   logic  onstate;
    
    integer handle3;
    integer desc3;
